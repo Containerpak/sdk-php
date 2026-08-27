@@ -1,11 +1,15 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "PHP SDK",
   "description": "PHP CLI, Composer, FPM and common development extensions.",
   "version": "8.5",
-  "image": "ghcr.io/containerpak/sdk-php:main",
-  "binaries": ["/usr/bin/php", "/usr/bin/composer", "/usr/sbin/php-fpm8.5"],
+  "image": "ghcr.io/containerpak/sdk-php@sha256:3594521e10ce727094aea399ebbdc575a55790cb10714cc18931b5340191c825",
+  "binaries": [
+    "/usr/bin/php",
+    "/usr/bin/composer",
+    "/usr/sbin/php-fpm8.5"
+  ],
   "desktop_entries": [],
   "dependencies": [],
   "addons": [],
@@ -14,21 +18,18 @@
     "slot": "sdk.php",
     "mode": "exclusive",
     "exports": {
-      "path": ["/usr/bin"]
+      "path": [
+        "/usr/bin"
+      ]
     }
   },
   "idle_time": 0,
   "override": {
-    "socketX11": false,
     "socketWayland": false,
     "socketPulseAudio": false,
-    "socketSessionBus": false,
-    "socketSystemBus": false,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": true,
-    "socketAtSpiBus": false,
-    "socketBluetooth": false,
     "deviceDri": false,
     "deviceKvm": false,
     "deviceShm": false,
@@ -40,7 +41,12 @@
     "deviceAll": false,
     "notification": false,
     "openURI": false,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -48,7 +54,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
