@@ -4,7 +4,7 @@
   "name": "PHP SDK",
   "description": "PHP CLI, Composer, FPM and common development extensions.",
   "version": "8.5",
-  "image": "ghcr.io/containerpak/sdk-php@sha256:3594521e10ce727094aea399ebbdc575a55790cb10714cc18931b5340191c825",
+  "image": "ghcr.io/containerpak/sdk-php@sha256:dbd53e5ee98efbb8c09ecebc78e0afe57649a9e1215a4dcfd59d217374aad1c9",
   "binaries": [
     "/usr/bin/php",
     "/usr/bin/composer",
